@@ -11,10 +11,12 @@
 		var $popUp = $("#pop-up"), 
 			$overlay = $("#overlay");
 
+		//Init Function
 		var init = function(){
 			showPopUp();
 		};
 
+		//Display Pop Up Information
 		var showPopUp = function(){
 			fadeInTool($overlay, 1000, function(ready){
 				if(ready){
@@ -25,6 +27,7 @@
 			})
 		};
 
+		//Progress bar Handler
 		var fillProgressControl = function(){
 			var $msg   = $popUp.find(".msg"), 
 				$barContent = $popUp.find(".bar-content"),
@@ -38,7 +41,8 @@
 
 				if(startValue >= targetValue) {
 					clearInterval(interval);
-					//Show Callback Content
+
+					//Show Callback Content//
 					fadeInTool($msg, "swing");
 					$indicator.addClass("bold");
 				}
@@ -47,6 +51,7 @@
 			}, 16);
 		};
 
+		//Re-usable FadeIn $ Function
 		var fadeInTool = function($elem, time, callback) {
 			$elem.animate({"opacity": 1, "display":"block"}, time, function(){
 				if(typeof callback == 'function') {
@@ -55,10 +60,12 @@
 			});
 		}
 
+		//Return Only Init Function
 		return {
 			init : init
 		};
 	};
 
+	//Execute Account Module
 	frw.account().init();
 })();
