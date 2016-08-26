@@ -1,0 +1,182 @@
+@import url("reset.css");
+
+/**
+ *
+ * Global Styles
+ *
+ */
+body, html {
+	height: 100%;
+}
+
+input, button, p, a, div {
+	line-height: 22px;
+	font-size: 1em;
+	font-family: "tahoma",serif;
+	text-decoration: none;
+}
+
+.bold {
+	font-weight: bolder;
+}
+
+.table {
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.row {
+	display: table-row;
+}
+
+.cell {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 20%;
+}
+
+
+
+/**
+ *
+ * Landing Account Page
+ *
+ */
+.container {
+	height: 100%;
+	position: relative;
+	z-index: 2;
+}
+
+.overlay { /*Overlay Style*/
+	background-color: #92aef7;
+	opacity: 0;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+} /*Overlay Style Ends*/
+
+/*Pop-up Style*/
+.pop-up {
+	margin-top: -50%;
+	overflow: hidden;
+	opacity: 0;
+	position: absolute;
+	top: 100%;
+	z-index: 999;
+} 
+
+.pop-up-content {
+	background-color: #ebebeb;
+	border: 1px solid #000000;
+	border-radius: 8px 8px 8px 8px;
+	margin: 0 auto;
+	min-width: 518px; 
+	overflow: hidden;
+	width: 50%;
+} 
+
+.pop-up header {	
+	background-color: #000000;
+	border-radius: 0 0 8px 8px;
+	color: #ffffff;
+	font-weight: bolder;
+	padding: .5% 0 .2% .5%;
+}
+
+.pop-up .pop-up-body {
+	padding: 2%;
+}
+
+.pop-up .pop-up-body-content {
+	background-color: #ffffff;
+	border: 1px solid #000000;
+	border-radius: 8px 8px 8px 8px;
+	padding: 1% 8%;
+}
+
+.pop-up .progress-control {
+	margin-top: 8px;
+	width: 90%
+}
+
+.pop-up .progress-control .progress-title {
+	font-weight: bolder;
+	padding-right: 4px;
+	text-align: left;
+}
+
+.pop-up .progress-control .progress-bar {
+	width: 80%;
+}
+
+.pop-up .progress-bar .bar-body {
+	height: 10px;
+	background-color: #f8f8f8;
+}
+
+.pop-up .progress-bar .bar-content{
+	height: 100%;
+	margin-top: 2px;
+}
+
+.pop-up .progress-bar .bar-content .bar{
+	background-color: #65bb59;
+	height: 100%;
+}
+
+.pop-up .progress-bar .bar-content .bar-indicator{
+	position: relative;
+	height: 100%;
+	width: 0px;
+}
+
+.pop-up .progress-bar .bar-content .bar-indicator span{
+	left: 0;
+	background: url("../images/arrow.png") no-repeat center 0;
+	margin-left: -16px;
+	padding-top: 16px;
+	position: absolute;
+	top: 100%;
+}
+
+.pop-up .progress-bar .bar-content .bar, .pop-up .progress-bar .bar-content .bar-indicator {
+	display: block;
+	float: left;
+}
+
+.pop-up .progress-control .progress-target {
+	background-color: #929292;
+	border: 1px solid #000000;
+	color: #ffffff;
+	font-weight: bolder;
+	min-width: 60px;
+	padding: 1% 0;
+	width: 24%;
+}
+
+.pop-up .msg {
+	color: #797979;
+	margin: 36px 2% 18px;
+	opacity: 0;
+} 
+
+.pop-up .msg span {
+	background: no-repeat center;
+	background-size: 100%;
+	display: inline-block;
+	height: 22px;
+	margin: 0 8px 0 0;
+	position: relative;
+	top: 4px;
+	width: 18px;
+}
+
+.pop-up .msg.msg-info span {
+	background-image: url("../images/info.png");
+} 
+
+/*Pop-up Style Ends*/
